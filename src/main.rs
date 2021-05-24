@@ -502,7 +502,6 @@ impl GPM {
     // General monitor after irremediable
     // errors.
     fn monitor11(&mut self) {
-        //self.stack_dump();
         self.w = 20;
         print!("\nCurrent macros are");
         while self.p != 0 || self.f != 0 {
@@ -540,29 +539,6 @@ impl GPM {
             self.start();
         }
     }
-
-    /*
-    fn stack_dump(&mut self) {
-        println!("\nBegin stack dump");
-        for (idx, i) in self.st.iter().take(self.s).enumerate() {
-            print!("{:8} ", i);
-            if (idx + 1) % 8 == 0 {
-                println!();
-            }
-        }
-        println!("\nEnd stack dump");
-        println!("Begin var dump");
-        println!("E: {}", self.e);
-        println!("Q: {}", self.q);
-        println!("C: {}", self.c);
-        println!("H: {}", self.h);
-        println!("P: {}", self.p);
-        println!("F: {}", self.f);
-        println!("A: {}", self.a);
-        println!("W: {}", self.w);
-        println!("End var dump\n")
-    }
-    */
 }
 
 // These are implementation-dependent functions. They
